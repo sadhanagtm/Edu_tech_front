@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script src="https://web.payment-gateway.moru.com.np/sdk/build/moru-checkout.js"></script>
+  </head>
+
+  <body onload="handleMoruPayment()">
+    <!-- <button onclick="handleMoruPayment()">Pay with Moru</button> -->
+    <script>
+      let amount = window.location.search;
+      const cookieObj = new URLSearchParams(
+        document.cookie.replaceAll("; ", "&")
+      );
+      console.log(cookieObj.get("token"));
+
+      console.log(window.location.hash);
+      const urlParams = new URLSearchParams(amount);
+      const price = +urlParams.get("amt");
+      const pacakgeId = urlParams.get("ID");
+      console.log("id", pacakgeId, "price", price);
+      const options = {
+        access_key:
+          "live_6b97e099b774463482e03ca3e6719594f6a9c8be0dd04f77b19211d3aa1640e1",
+        transaction_id: "10",
+        additional_fields: {
+          purchaseType: "Package",
+          purchaseItemId: `${pacakgeId}`,
+        },
+        callback_handler: {
+          onSuccess: async (response) => {
+            try {
+              const paymentResponse = await fetch("https://api.sikkainepal.com/v1/moru-payment/moru-payment", {
+              method: "POST",
+              body: JSON.stringify({
+                moru_txn_identifier: `${response.moru_txn_identifier}`,
+              }),
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${cookieObj.get("token")}`,
+              },
+            });
+            
+            console.log('inside success', paymentResponse.status);
+            console.log(paymentResponse);
+            if(paymentResponse.status==400 || paymentResponse.status>=400){
+              window.location.replace(`https://sikkainepal.com/Error?message=some%20thing%20went%20wrong.%20please%20contact%20your%20service%20provider&&location=home`);
+            }else{
+              window.location.replace(`https://sikkainepal.com/Success?message=Package%20has%20been%20purchased%20successfully&&location=home`);
+
+            }
+            } catch (error) {
+             console.log('inside error');
+             console.log(error); 
+            }
+          },
+          onError: (error) => {
+            console.log(error);
+            alert("failure");
+          },
+          onClose: () => {
+            window.history.back();
+          },
+        },
+      };
+      const checkout = new MoruCheckout(options);
+      console.log(amount);
+      const handleMoruPayment = () => {
+        checkout.open({ amount: price});
+      };
+      window.history.replaceState("", "", "/");
+    </script>
+  </body>
+</html>

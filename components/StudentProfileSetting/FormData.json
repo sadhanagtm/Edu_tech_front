@@ -1,0 +1,132 @@
+[
+	{
+		"title": "General Information",
+		"info": [
+			{
+				"title": "FullName",
+				"type": "text",
+				"apiKey": "full_name",
+				"placeholder": "Enter your full name"
+			},
+			{
+				"title": "Gender",
+				"type": "select",
+				"options": [
+					{
+						"name": "Male",
+						"id": "male"
+					},
+					{
+						"name": "Female",
+						"id": "female"
+					},
+					{
+						"name": "Other",
+						"id": "other"
+					}
+				],
+				"apiKey": "Gender",
+				"placeholder": "Enter your gender"
+			},
+			{
+				"title":"Guardain",
+				"type": "select",
+				"options":[
+					{
+						"name": "Father",
+						"id": "Father"
+					},
+					{
+						"name": "husband",
+						"id": "Husband"
+					},{
+						"name": "mother",
+						"id": "Mother"
+					},
+					{
+						"name": "wife",
+						"id": "Wife"
+					}
+				],
+				"apiKey": "guardian_type",
+				"placeholder": "Enter your father or husband name"
+			},
+			{
+				"title": "Guardain Name",
+				"type": "text",
+				"apiKey": "father_or_husband_name",
+				"placeholder": "Enter your guardian name"
+			},
+			{
+				"title": "GrandFather",
+				"type": "text",
+				"apiKey": "grand_father_or_father_in_law",
+				"placeholder": "Enter your grandfather name"
+			},
+			{
+				"title": "Marital Status",
+				"type": "text",
+				"apiKey": "marital_status",
+				"placeholder": "Enter your marital status"
+			}
+		]
+	},
+	{
+		"title": "Address Information",
+		"info": [
+			{
+				"title": "Current Country",
+				"type": "select",
+				"apiKey": "current_country",
+				"placeholder": "Enter your current country"
+			},
+			{
+				"title": "Current Address",
+				"type": "text",
+				"apiKey": "current_address",
+				"placeholder": "Enter your current address"
+			},
+			{
+				"title": "Permanent Country",
+				"type": "select",
+				"apiKey": "permanent_country",
+				"placeholder": "Enter your permanent country"
+			},
+			{
+				"title": "Permanent Address",
+				"type": "text",
+				"apiKey": "permanent_address",
+				"placeholder": "Enter your permanent address"
+			}
+		]
+	},
+	{
+		"title": "Legal Information",
+		"info": [
+			{
+				"title": "CitizenShip No",
+				"type": "number",
+				"apiKey": "citizenship_no",
+				"placeholder": "Enter your citizenship no"
+			},
+			{
+				"title": "Issue Date",
+				"type": "date",
+				"apiKey": "issue_date",
+				"placeholder": "Enter issue date"
+			},
+			{
+				"title": "Issue Country",
+				"type": "select",
+				"apiKey": "issued_country",
+				"placeholder": "Enter issue Country"
+			},
+			{
+				"title": "Issue District",
+				"type": "text",
+				"apiKey": "issue_district",
+				"placeholder": "Enter issue district"
+			}
+		]
+	}
+]

@@ -1,0 +1,77 @@
+@import "./utils.scss";
+@import "react-slideshow-image/dist/styles.css";
+
+/* RC TABS START */
+
+.rc-tabs {
+  border: none !important;
+}
+// .rc-tabs-tab {
+//   // text-transform: capitalize;
+// }
+.rc-tabs-tab .rc-tabs-tab-btn {
+  font-weight: normal;
+}
+.rc-tabs-tab.rc-tabs-tab {
+  display: block;
+  background: $TabGray;
+  width: 100%;
+  font-size: medium;
+  padding: 10px 15px;
+  font-weight: bolder;
+}
+.rc-tabs-tab.rc-tabs-tab-active {
+  color: #0fa3d1;
+  font-weight: 900;
+}
+.rc-tabs-ink-bar {
+  display: none;
+  background: $primaryColor !important;
+}
+.rc-tabs-content-holder {
+  width: 100%;
+  padding: 10px;
+  background: #f3f4f6;
+}
+.rc-tabs-content {
+  padding: 20px 5px;
+  font-weight: normal;
+}
+.businessbg {
+  background: url("../../public/business\ page\ Bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 480px) {
+  .businessbg {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .businessbg {
+    background-size: cover;
+  }
+}
+li {
+  display: list-item;
+}
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+.ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+/* RC TABS STOP */

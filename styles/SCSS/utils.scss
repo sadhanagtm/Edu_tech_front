@@ -1,0 +1,443 @@
+$primaryColor: #02a8d9;
+
+$primaryLight: rgba(2, 167, 217, 0.1);
+$Gray: #686868;
+$GrayD: #6a6363;
+$SecondaryColor: #ef3c23;
+$Dark: #0d0106;
+
+$GrayOne: #f9f9f9;
+$GrayTwo: #f2f2f2;
+$grayFour: #e3e3e3;
+$buttonone: #159996;
+$TabGray: #e5e7eb;
+
+$GrayOne: #f9f9f9;
+$GrayTwo: #f2f2f2;
+$grayFour: #e3e3e3;
+$buttonone: #159996;
+
+//  font family
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Twinkle+Star&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.font-openSansFour {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.OpenSans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.font-openSansEight {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+.font-openSansSeven {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.font-openSansSix {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.font-openSansFive {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+.font-openSansThree {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.font-MonteSerratFour {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.font-MonteSerratEight {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.font-MonteSerratSeven {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.font-MonteSerratSix {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.font-MonteSerratFive {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.font-MonteSerratThree {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+// fonts closed
+
+.bg-primary {
+  background-color: $primaryColor;
+}
+.bg-primary-light {
+  background-color: $primaryLight;
+}
+
+.bg-gray {
+  background-color: $Gray;
+}
+.bg-grayOne {
+  background-color: $GrayOne;
+}
+.bg-grayTwo {
+  background-color: $GrayTwo;
+}
+.bg-grayFour {
+  background-color: $grayFour;
+}
+.bg-grayD {
+  background-color: $GrayD;
+}
+.border-primary {
+  border-color: $primaryColor;
+}
+.text-primary {
+  color: $primaryColor;
+}
+.bg-secondary {
+  background-color: $SecondaryColor;
+}
+.text-secondary {
+  color: $SecondaryColor;
+}
+.text-gray {
+  color: $Gray;
+}
+.text-grayD {
+  color: #686868;
+}
+.text-gray-dark {
+  color: $GrayD;
+}
+
+@mixin btn($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  padding: 8px 16px;
+  transition: all 0.2s;
+}
+.btn-primary {
+  @include btn($primaryColor, white);
+}
+.btn-Add {
+  @include btn($buttonone, white);
+}
+.btn-secondary {
+  @include btn($GrayD, black);
+}
+@mixin btn-outline($color, $border) {
+  border: 1px solid $border;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-outline-primary {
+  @include btn-outline($primaryColor, $primaryColor);
+  cursor: pointer;
+}
+
+.btn-outline-secondary {
+  @include btn-outline($SecondaryColor, $SecondaryColor);
+  cursor: pointer;
+}
+.btn-outline-Gray {
+  @include btn-outline($Gray, $Gray);
+  cursor: pointer;
+}
+.card {
+  background-color: white;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+}
+
+.card-one {
+  background-color: white;
+  // border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.02);
+  padding: 1.5rem 2.5rem;
+}
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.OverViewButton {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  height: fit-content;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  display: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  display: none;
+  background-color: rgb(117, 136, 144);
+  outline: 1px solid slategrey;
+}
+.scroll {
+  overflow: scroll;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+  width: 0.08rem;
+}
+.scroll::-webkit-scrollbar-thumb {
+  display: none;
+  background-color: $GrayD;
+  outline: 1px solid $GrayD;
+}
+#UserProfile::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  top: -19px;
+  right: 14px;
+  border: 10px solid transparent;
+  border-bottom-color: $GrayTwo;
+}
+.UserProfile::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  top: -19px;
+  right: 14px;
+  border: 10px solid transparent;
+  border-bottom-color: $GrayTwo;
+}
+input {
+  outline: none;
+}
+// default css for html elemets
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h6 {
+  display: block;
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.collapsible .content {
+  padding: 0.5rem;
+}
+.collapsible .content-parent {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease-in-out 0.4s;
+}
+.roundeds {
+  display: none;
+  color: transparent;
+  padding: 0px 0px 0px 5px;
+  transition: ease-in-out 0.8s;
+
+  background: #03c9a9;
+  position: relative;
+  display: block;
+  float: left;
+}
+.roundeds::before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #03c9a9;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+.roundeds::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #03c9a9;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+.text {
+  color: #03c9a9;
+}
+.bg-color {
+  background-color: rgb(251, 252, 252);
+}
+
+.categoryFilter {
+  color: rgb(239, 239, 239);
+  text-shadow: 1px 1px 5px rgb(25, 24, 24);
+}
+.hoverme:hover {
+  background-color: #02a8da;
+}
+
+// .featureData{
+//   background-image: url('../../public/Teamwork.jpeg');
+//   // background-image:linear-gradient(0deg, rgba(2,10,20,0.8995973389355743) 20%, rgba(0,2,20,0.6979166666666667) 55%, rgba(1,2,1,0.3029586834733894) 80%, rgba(1,2,3,0.8995973389355743) 100%), url(../../public/Teamwork.jpeg);
+//   background-repeat: no-repeat;
+
+// }
+// .featureData::before{
+//   ba
+// }
+
+.hovertext:hover {
+  color: #02a8da;
+}
+.scale-130:hover {
+  transform: scale(1.3);
+}
+
+.homeBanner {
+  background-color: #f0f7ee;
+  // background-image: url("../../components/resources/images/Background2.jpg");
+}
+.navBg {
+  background-color: #fcfcfc;
+}
+
+.smalltext {
+  font-size: 1px;
+  color: red;
+}
+.borderRadiusRight {
+  border-radius: 0px 5px 5px 0px;
+}
+.text-verySmall {
+  font-size: 9px;
+}
+
+button.disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.25;
+}
+
+// Nischal karki
+
+.activePage{
+  background-color: $primaryColor;
+  border: none;
+  padding: 2px 12px;
+  font-weight: 500;
+  color: white;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul{
+    display: none;
+    list-style-type: none;
+  }
+}
+.customPaginate
+  ul{
+    display: none;
+    list-style-type: none;
+  }
+
+.classPaginate{
+  border: 1px solid $GrayD;
+  padding: 2px 12px;
+  font-weight: 500;
+  // color: #525252;
+  border-radius: 10%;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    background-color: $primaryColor;
+    color:white
+  }
+  ul{
+    display: none;
+    list-style-type: none;  
+}
+}
