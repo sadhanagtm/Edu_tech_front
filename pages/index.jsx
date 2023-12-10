@@ -72,11 +72,11 @@ export default function Home() {
           <div className="container mx-auto px-4 lg:px-8">
             <PopularCourses />
           </div>
-          <div className="">
+          {/* <div className="">
             <UserInfoContextApi>
               <Packages />
             </UserInfoContextApi>
-          </div>
+          </div> */}
           <div className="container mx-auto pb-10">
             <PopularAffiliator />
           </div>

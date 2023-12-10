@@ -8,7 +8,8 @@ import SubHeader from "../../components/Navigation/Toolbar/SubHeader";
 import ToolBar from "../../components/Navigation/Toolbar/ToolBar";
 import UserInfoContextApi from "../ContextApi/UserInfo.jsx";
 
-function Layout(props) {
+function 
+Layout(props) {
   const [show, setShow] = useState(false);
   const [showSearchForm, setShowSearchForm] = useState(false);
   const [showInputData, setShowInputData] = useState(false);

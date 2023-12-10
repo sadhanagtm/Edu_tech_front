@@ -39,7 +39,7 @@ function Sidebar({ show, setShow, style }) {
         >
           <div className="container mx-auto p-6">
             <div className="w-32 cursor-pointer">
-              <Link href={"/"} passHref>
+              {/* <Link href={"/"} passHref>
                 <Image
                   alt="logo"
                   src={Logo}
@@ -50,7 +50,7 @@ function Sidebar({ show, setShow, style }) {
                   layout="responsive"
                   objectFit="contain"
                 />
-              </Link>
+              </Link> */}
             </div>
             <p></p>
           </div>
@@ -76,7 +76,7 @@ function Sidebar({ show, setShow, style }) {
 
           <hr className="my-4" />
           <div className=" flex flex-col space-y-4 mx-5 my-2">
-            <Link href="/courses" passHref>
+            {/* <Link href="/courses" passHref>
               <div
                 className={` ${
                   router.asPath === "/courses" ? "text-primary w-fit" : ""
@@ -84,7 +84,7 @@ function Sidebar({ show, setShow, style }) {
               >
                 Courses
               </div>
-            </Link>
+            </Link> */}
             <Link href="/CoursesCategory" passHref>
               <div
                 className={` ${

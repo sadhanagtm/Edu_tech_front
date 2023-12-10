@@ -377,8 +377,8 @@ function ToolBar({
 
         {/* sikkai logo */}
         <div className="hidden lg:block">
-          <div className="w-28 lg:w-24 xl:ml-1 2xl:ml-0 cursor-pointer">
-            <Link href={"/"} passHref>
+          <div className="w-28 bg-red-700 lg:w-24 xl:ml-1 2xl:ml-0 cursor-pointer">
+            {/* <Link href={"/"} passHref>
               <Image
                 alt="logo"
                 src={Logo}
@@ -389,7 +389,7 @@ function ToolBar({
                 layout="responsive"
                 objectFit="contain"
               />
-            </Link>
+            </Link> */}
           </div>
         </div>
         {/* mid section  */}

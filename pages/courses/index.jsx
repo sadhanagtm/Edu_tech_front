@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-
-import { AiOutlineClose } from "react-icons/ai";
 import { BiChevronLeft } from "react-icons/bi";
 import { BiFilter } from "react-icons/bi";
 import BreakPointTest from "../../components/test/BreakPointTest";
@@ -33,7 +31,7 @@ function Courses() {
   const [searchInput, setSearchInput] = useState("");
   const [showSearchbyprice, setShowSearchbyprice] = useState("");
   const [metaTag, setMetaTag] = useState("");
-  const [ShowSearchCat, setShowSearchCat] = useState("");
+  // const [ShowSearchCat, setShowSearchCat] = useState("");
 
   const [changePageClick, setChangePageClick] = useState("1");
   // console.log(process.env.NEXT_PUBLIC_API);
@@ -123,7 +121,7 @@ function Courses() {
     }
   };
   return (
-    <div>
+    <div >
       <Head>
         <title className="">Sikka-i</title>
         {/* <!-- Primary Meta Tags --> */}
@@ -192,7 +190,7 @@ function Courses() {
                         // name="searchInput"
                         id="input"
                         placeholder="Search ..."
-                        className="w-full  py-2  "
+                        className="w-full bg-green-400 py-2 "
                         onChange={(e) => setSearchInput(e.target.value)}
                       />
                     </div>
@@ -250,7 +248,7 @@ function Courses() {
               {/* {mod} */}
             </div>
             {/* right side of grid starts  */}
-            {data.length > 0 ? (
+            {/* {data.length > 0} ? ( */}
               <div className="md:col-span-8 lg:col-span-9 bg-gray-50 mt-4 w-full p-8">
                 {/* top section starts  */}
                 <div className="flex items-center justify-between ">
@@ -291,6 +289,7 @@ function Courses() {
                         course_thumbnail={item.thumbnail_img}
                         // ratingNo={item.ratingNo}
                         price={item.price}
+                        // price='500'
                         RP={item.RP}
                         SP={item.SP}
                         discount={item.discount}
@@ -318,16 +317,18 @@ function Courses() {
                   sideButton={sideButton}
                 />
               </div>
-            ) : (
+            {/* )  */}
+            
               <div className="md:col-span-8 lg:col-span-9 bg-gray-50 mt-4 w-full p-8">
                 {/* <BreakPointTest /> */}
-                <div className="capitalize text-base h-80 md:text-4xl text-gray-300 flex justify-center items-center  md:h-full ">
+                <div className="capitalize text-base h-80 bg-red-600 md:text-4xl text-gray-300 flex justify-center items-center  md:h-full ">
                   no courses are available !!!..
                   {/* {console.log(data)} */}
                   {/* {data.length} */}
                 </div>
               </div>
-            )}
+            {/* ) */}
+            {/* } */}
           </div>
           {/* grid ends */}
         </div>
