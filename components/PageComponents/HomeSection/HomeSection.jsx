@@ -116,26 +116,27 @@ function HomeSection() {
     ),
   };
   return (
-    <div className="h-150 2xl:h-152 py-8 md:py-10 2xl:py-12  homeBanner bg-red-300  ">
+    <div className="h-150 2xl:h-152 py-8 md:py-10 2xl:py-12  homeBanner bg-red-900  ">
       <div
-        className=" mx-auto h-146 2xl:h-150 px-4 lg:px-16 lg:mr-2 xl:mr-0     xl:px-16
+        className=" mx-auto h-146 2xl:h-150 px-4 lg:px-16 lg:mr-2 xl:mr-0  bg-blue-400   xl:px-16
        2xl:px-14"
       >
+      lol
         <div className="grid grid-cols-12 h-146 2xl:bg-red-400  2xl:h-150 gap-6   md:gap-10">
           {/* slider section starts  */}
           <div
-            className="w-full  mx-auto overflow-clip col-span-12 relative
+            className="w-full  mx-auto overflow-clip bg-yellow-700 col-span-12 relative
            lg:col-span-8 h-145 2xl:h-150 shadow-xl shadow-gray-900"
           >
             {/* <Slider {...settings}> */}
             <Fade {...properties}>
               {data.map((item, i) => (
                 <div
-                  className="h-145 w-full 2xl:h-150 "
+                  className="h-145 w-full 2xl:h-150 px-7 "
                   style={{
                     contain: "",
                     content: "",
-                    backgroundImage: `url(${item.bgImg})`,
+                    // backgroundImage: `url(${item.bgImg})`,
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: i === 0 ? "left" : "center",
                     backgroundSize: "cover",
@@ -159,14 +160,14 @@ function HomeSection() {
           {/* slider section ends  */}
 
           {/* right section  */}
-          <div className="col-span-12 pb-9  lg:col-span-4">
+          <div className="col-span-12 pb-9 bg-blue-800 lg:col-span-4">
             <div
               className="flex flex-col lg:h-145 relative  space-y-6 
             md:flex-row md:space-y-0 md:space-x-8 lg:space-x-0
             2xl:space-y-0 2xl:grid 2xl:grid-cols-1 
              2xl:place-content-between 2xl:h-full  lg:grid lg:gap-3 lg:space-y-0 2xl:gap-5 "
             >
-              <div
+              {/* <div
                 className="w-full shadow-lg
                 px-4 py-auto text-white shadow-gray-500 "
                 style={{
@@ -191,10 +192,10 @@ function HomeSection() {
                 >
                   View More
                 </p>
-              </div>
+              </div> */}
 
               {/* 2nd div  */}
-              <div
+              {/* <div
                 className="w-full shadow-lg  
                 px-4 py-auto text-white shadow-gray-500 "
                 style={{
@@ -219,11 +220,11 @@ function HomeSection() {
                 >
                   View More
                 </p>
-              </div>
+              </div> */}
 
               {/* 2nd div ends /  */}
               {/* 3rd div  */}
-              <div
+              {/* <div
                 className="w-full 
                 shadow-lg px-4 py-auto text-white
                  shadow-gray-500 "
@@ -250,7 +251,7 @@ function HomeSection() {
                 >
                   View More
                 </p>
-              </div>
+              </div> */}
 
               {/* 3rd div ends /  */}
             </div>

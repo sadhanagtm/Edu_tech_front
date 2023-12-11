@@ -29,7 +29,7 @@ function Pagination({
               onClick={() => buttonPagination(val.i)}
               className={`h-14 w-14 py-3 ${
                 +changePageClick === val.i
-                  ? "bg-primary text-white "
+                  ? "bg-red-800 text-white "
                   : "bg-gray-200"
               } mx-auto text-center cursor-pointer`}
             >

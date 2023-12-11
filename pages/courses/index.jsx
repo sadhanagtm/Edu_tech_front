@@ -19,12 +19,13 @@ import axios from "../../HOC/Axios/Axios";
 import instructor from "../../components/resources/images/roxit.jpg";
 import { set } from "react-hook-form";
 import { useRouter } from "next/router";
+import {datavalue} from './dummydata'
 
 function Courses() {
   const [filter, setFilter] = React.useState(false);
   const [data, setData] = React.useState([]);
   const [Category, setCategory] = React.useState([]);
-  // console.log("cat state", Category);
+  console.log("cat state", Category);
   const [SpinnerShow, setSpinner] = useState(false);
 
   const [showSearch, setShowSearch] = useState("");
@@ -44,46 +45,46 @@ function Courses() {
       setSearchInput(course ? course : "");
     }
   }, [router.isReady, showSearch, category, course, searchInput]);
-  const getCategory = async () => {
-    try {
-      setSpinner(true);
-      await axios
-        .get(`/category/withNum`)
-        .then((res) => {
-          console.log(res);
-          if (res.status === 200) {
-            setSpinner(false);
-            setCategory(res.data.data);
-          }
-        })
-        .catch((err) => {
-          setSpinner(false);
-        });
-    } catch (error) {
-      setSpinner(false);
+  // const getCategory = async () => {
+  //   try {
+  //     setSpinner(true);
+  //     await axios
+  //       .get(`/category/withNum`)
+  //       .then((res) => {
+  //         console.log(res);
+  //         if (res.status === 200) {
+  //           setSpinner(false);
+  //           setCategory(res.data.data);
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         setSpinner(false);
+  //       });
+  //   } catch (error) {
+  //     setSpinner(false);
 
-      console.error(error);
-    }
-  };
+  //     console.error(error);
+  //   }
+  // };
 
   useEffect(() => {
     // alert(showSearch);
-    const fetch = async () => {
-      try {
-        await axios
-          .get(
-            `/course?order=ASC&page=${changePageClick}&take=9&course_name=${searchInput}&category_id=${showSearch}&course_price=${showSearchbyprice}`
-          )
-          .then((res) => {
-            console.log("course", res.data);
-            setData(res.data.data);
-            setMetaTag(res.data.meta);
-          });
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetch();
+    // const fetch = async () => {
+    //   try {
+    //     await axios
+    //       .get(
+    //         `/course?order=ASC&page=${changePageClick}&take=9&course_name=${searchInput}&category_id=${showSearch}&course_price=${showSearchbyprice}`
+    //       )
+    //       .then((res) => {
+    //         console.log("course", res.data);
+    //         setData(res.data.data);
+    //         setMetaTag(res.data.meta);
+    //       });
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // };
+    // fetch();
   }, [
     searchInput,
     router.isReady,
@@ -91,9 +92,9 @@ function Courses() {
     showSearchbyprice,
     changePageClick,
   ]);
-  useEffect(() => {
-    getCategory();
-  }, []);
+  // useEffect(() => {
+  //   getCategory();
+  // }, []);
 
   const clickSearch = (id) => {
     setShowSearch(id);
@@ -120,9 +121,11 @@ function Courses() {
       setChangePageClick(data + 1);
     }
   };
+  console.log(datavalue,'sadhana');
+
   return (
     <div >
-      <Head>
+      <Head className="bg-green-600">
         <title className="">Sikka-i</title>
         {/* <!-- Primary Meta Tags --> */}
         <title>Courses -- Sikkai Learning Platform</title>
@@ -144,13 +147,13 @@ function Courses() {
         />
         <meta
           property="og:image"
-          content="https://sikkai-public-resources.s3.ap-south-1.amazonaws.com/banner+image-01.jpg"
+          // content="https://sikkai-public-resources.s3.ap-south-1.amazonaws.com/banner+image-01.jpg"
         />
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://sikkainepal.com/courses"
+          // content="https://sikkainepal.com/courses"
         />
         <meta
           property="twitter:title"
@@ -162,7 +165,7 @@ function Courses() {
         />
         <meta
           property="twitter:image"
-          content="https://sikkai-public-resources.s3.ap-south-1.amazonaws.com/banner+image-01.jpg"
+          // content="https://sikkai-public-resources.s3.ap-south-1.amazonaws.com/banner+image-01.jpg"
         />{" "}
         <link rel="icon" href="/favicon-16x16.png" />
       </Head>
@@ -249,7 +252,7 @@ function Courses() {
             </div>
             {/* right side of grid starts  */}
             {/* {data.length > 0} ? ( */}
-              <div className="md:col-span-8 lg:col-span-9 bg-gray-50 mt-4 w-full p-8">
+              <div className="md:col-span-8 lg:col-span-9 bg-blue-200 mt-4 w-full p-8">
                 {/* top section starts  */}
                 <div className="flex items-center justify-between ">
                   <h1 className="font-bold text-xl text-gray-600">
@@ -273,11 +276,14 @@ function Courses() {
                   </div>
                 </div>
                 {/* top section ends  */}
+                {/* console.log('aaaaa'); */}
 
                 {/* course card section starts  */}
                 <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 my-8">
-                  {data.map((item, i) => {
+                  {datavalue.map((item, i) => {
                     let uploads = `${process.env.NEXT_PUBLIC_FILE}/images`;
+                    console.log('baaaaa');
+
                     return (
                       <CourseCard
                         key={i}
@@ -293,9 +299,10 @@ function Courses() {
                         RP={item.RP}
                         SP={item.SP}
                         discount={item.discount}
-                        instructor_img={item.instructor.profile_img}
+                        instructor_img={item.instructor?.profile_img}
                         instructor_name={item.instructor?.first_name}
                         no_videos={item.course_content}
+                        
                         SpinnerShow={SpinnerShow}
                         setSpinner={setSpinner}
                       />
