@@ -1,10 +1,10 @@
 export const NavData = [
   {
-    title: "Sikkai for Business",
+    title: "for Business",
     link: "/businessPage",
   },
   {
-    title: "Be the Sikka-I Guru",
+    title: "for Guru",
     link: "/become_instructor",
   },
 ];

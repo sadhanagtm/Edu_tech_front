@@ -248,7 +248,7 @@ function ToolBar({
               return (
                 <div key={i} className=" flex items-center gap-2 m-2">
                   <div>
-                    <FiSearch className="text-gray-600 text-lg" />
+                    <FiSearch className="text-gray-800 text-lg" />
                   </div>
                   <Link
                     href={{
@@ -377,8 +377,8 @@ function ToolBar({
 
         {/* sikkai logo */}
         <div className="hidden lg:block">
-          <div className="w-28 bg-green-700 lg:w-24 xl:ml-1 2xl:ml-0 cursor-pointer">
-            {/* <Link href={"/"} passHref>
+          {/* <div className="w-28 bg-yellow-700 lg:w-24 xl:ml-1 2xl:ml-0 cursor-pointer">
+            <Link href={"/"} passHref>
               <Image
                 alt="logo"
                 src={Logo}
@@ -389,8 +389,8 @@ function ToolBar({
                 layout="responsive"
                 objectFit="contain"
               />
-            </Link> */}
-          </div>
+            </Link>
+          </div> */}
         </div>
         {/* mid section  */}
 
@@ -403,12 +403,12 @@ function ToolBar({
                 <BiCategory />
               </p>
               <Link href="/courses" passHref>
-                <p>Courses</p>
+                <p className="font-semibold">Courses</p>
               </Link>
             </div>
 
             {!inputTwister ? (
-              <div className=" relative  flex-row-reverse hidden lg:flex items-center  bg-primary rounded-full border-2 xl:w-10/12 lg:w-8/12 border-primary shadow-md text-sm">
+              <div className=" relative flex-row-reverse hidden lg:flex items-center  bg-primary rounded-full border-2 xl:w-96 lg:w-8/12 border-primary shadow-md text-sm">
                 <p className="text-white px-2">
                   <FiSearch />
                 </p>
@@ -429,7 +429,7 @@ function ToolBar({
               </div>
             )}
             {/* sikkai navigation */}
-            <div className="lg:flex hidden capitalize items-center lg:space-x-4 xl:space-x-8 2xl:space-x-10 w-full justify-center">
+            {/* <div className="lg:flex hidden capitalize items-center lg:space-x-4 xl:space-x-8 2xl:space-x-10 w-full justify-center">
               {NavData.map((val, i) => {
                 if (val.disable === undefined) {
                   return (
@@ -439,17 +439,16 @@ function ToolBar({
                     >
                       <Link href={val.link} passHref>
                         <div
-                          className={`w-fit  cursor-pointer font-medium lg:text-sm ${
-                            val.link === Route ? "font-medium " : null
-                          } active:border-b-2 transition hover:opacity-60`}
+                          className={`w-fit  cursor-pointer font-medium lg:text-sm ${val.link === Route ? "font-medium " : null
+                            } active:border-b-2 transition hover:opacity-60`}
                         >
                           {val.title}
                         </div>
-                      </Link>
+                      </Link> */}
                       {/* {val.link === Route && (
                         <div className="h-0.5 w-2/3 bg-primary absolute top-7"></div>
                       )} */}
-                    </div>
+                    {/* </div>
                   );
                 } else {
                   return (
@@ -459,9 +458,8 @@ function ToolBar({
                     >
                       <div href={val.link}>
                         <div
-                          className={`w-fit cursor-not-allowed font-medium lg:text-sm ${
-                            val.link === Route ? "font-medium " : null
-                          } active:border-b-2 transition hover:opacity-60`}
+                          className={`w-fit cursor-not-allowed font-medium lg:text-sm ${val.link === Route ? "font-medium " : null
+                            } active:border-b-2 transition hover:opacity-60`}
                         >
                           {val.title}
                         </div>
@@ -473,7 +471,7 @@ function ToolBar({
                   );
                 }
               })}
-            </div>
+            </div> */}
           </div>
         </div>
         {/* right bar icons */}
@@ -558,8 +556,8 @@ function ToolBar({
                 {!showInputData ? (
                   <div
                     className="flex justify-center  items-center space-x-2"
-                    // onMouseEnter={() => setShowProfileLink(true)}
-                    // onMouseLeave={() => setShowProfileLink(false)}
+                  // onMouseEnter={() => setShowProfileLink(true)}
+                  // onMouseLeave={() => setShowProfileLink(false)}
                   >
                     <div className="font-openSansSix lg:text-lg text-xl  text-gray capitalize mr-1 flex">
                       {/* {fname[0]} */}
