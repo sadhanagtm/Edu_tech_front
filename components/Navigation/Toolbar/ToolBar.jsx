@@ -377,7 +377,7 @@ function ToolBar({
 
         {/* sikkai logo */}
         <div className="hidden lg:block">
-          <div className="w-28 bg-red-700 lg:w-24 xl:ml-1 2xl:ml-0 cursor-pointer">
+          <div className="w-28 bg-green-700 lg:w-24 xl:ml-1 2xl:ml-0 cursor-pointer">
             {/* <Link href={"/"} passHref>
               <Image
                 alt="logo"

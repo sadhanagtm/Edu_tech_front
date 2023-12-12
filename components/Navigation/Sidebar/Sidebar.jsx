@@ -34,7 +34,7 @@ function Sidebar({ show, setShow, style }) {
       <StyleRoot>
         <div
           style={styles.fadeInLeft}
-          className={`  absolute bg-white top-0  z-50 left-0 text-black
+          className={`  absolute bg-white top-0 z-50 left-0 text-black
         lg:hidden h-screen w-3/4 scroll pb-10`}
         >
           <div className="container mx-auto p-6">

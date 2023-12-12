@@ -92,23 +92,22 @@ function Footer() {
                 return (
                   <div
                     key={i}
-                    className="my-3 text-xs sm:text-base transition hover:opacity-70  w-fit cursor-pointer "
-                  >
+                    className="my-3 text-xs sm:text-base transition hover:opacity-70  w-fit cursor-pointer" >
                     {val.title}
                   </div>
                 );
               })}
             </div>
           </div>
-          <div className="col-span-2  ">
-            <div className="capitalize mb-6 text-primary font-openSansSix  md:text-xl">
+          <div className="col-span-2">
+            <div className="capitalize mb-6 text-primary font-openSansSix md:text-xl">
               contact
             </div>
             <div className="flex flex-col items-start gap-2 text-white">
               <div className="text-base font-openSansFive">Head Office :</div>
               <div className="flex items-center gap-1">
                 <div>
-                  <IoLocationSharp className="w-4 h-4 " />
+                  <IoLocationSharp className="w-4 h-4" />
                 </div>
                 <div className="text-sm font-openSansThree">
                   Kalikanagar-13 Butwal, Rupandehi

@@ -8,8 +8,8 @@ import React from "react";
 
 function SubHeader() {
   return (
-    <div className="hidden lg:block bg-orange-500 capitalize  mx-auto lg:px-8 py-3">
-      <div className="flex justify-end lg:mx-8  space-x-4 text-white font-openSansFive">
+    <div className="hidden lg:block bg-green-500 capitalize mx-auto lg:px-8 py-4">
+      <div className="flex justify-end lg:mx-14 space-x-4 text-white font-openSansFive">
         {/* right section  */}
         <div>
           {" "}
@@ -33,14 +33,14 @@ function SubHeader() {
             </p>
           </Link>
         </div>
-        {/* <div>
+        <div>
           {" "}
-          <Link href="/" passHref>
+          {/* <Link href="/" passHref>
             <p className="transition  hover:opacity-80 cursor-pointer">
               live Seminar
             </p>
-          </Link>
-        </div> */}
+          </Link> */}
+        </div>
         <div>
           {" "}
           <Link href="/Download" passHref>
