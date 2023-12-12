@@ -174,9 +174,9 @@ function Courses() {
           {SpinnerShow ? <Spinner /> : null}
 
           {/* <BreakPointTest /> */}
-          <div className="md:grid md:grid-cols-12 md:gap-8 relative">
+          <div className="md:grid bg-pink-300 md:grid-cols-12 md:gap-8 relative">
             {/* left side starts  */}
-            <div className=" md:p-0 md:col-span-4  w-full  lg:col-span-3">
+            <div className=" md:p-0 md:col-span-4  w-full bg-green-300  lg:col-span-3">
               {/* for mobile device responsive design search bar section starts  */}
               <div className="flex items-center pt-12 md:hidden pb-2 px-4 space-x-4">
                 <div
