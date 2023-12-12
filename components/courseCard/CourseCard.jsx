@@ -45,7 +45,7 @@ function CourseCard({
       }
       passHref
     >
-      <div className="hover:scale-105  transition-all ease-in-out duration-300 delay-100  shadow-xl relative cursor-pointer">
+      <div className="bg-red-700 hover:scale-105  transition-all ease-in-out duration-300 delay-100  shadow-xl relative cursor-pointer">
         <div
           onClick={() => {
             setSpinner ? setSpinner(true) : null;
@@ -80,7 +80,7 @@ function CourseCard({
           </div>
         )}
         {/* card content section  */}
-        <div className="p-4 ">
+        <div className="p-4 bg-red-100">
           <div className="bg-blue-400 capitalize  px-2 py-2 rounded font-openSansSix text-white inline-block">
             <p className="text-xs">{category}</p>
           </div>
@@ -121,12 +121,13 @@ function CourseCard({
                 <div className="text-gray-600 font-bold text-sm ">/</div>
                 <div className="text-primary font-bold  text-verySmall 2xl:text-xs ">
                   SP.{SP}
-                  {/* {console.log(RP)} */}
+                  {console.log(RP)}
                 </div>
               </div>
             ) : (
-              ""
-            )}
+              "vbcffc"
+            )
+            }
             <div className="flex items- gap-2   ">
               {discount && (
                 <p

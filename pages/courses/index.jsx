@@ -25,7 +25,7 @@ function Courses() {
   const [filter, setFilter] = React.useState(false);
   const [data, setData] = React.useState([]);
   const [Category, setCategory] = React.useState([]);
-  console.log("cat state", Category);
+  // console.log("cat state", Category);
   const [SpinnerShow, setSpinner] = useState(false);
 
   const [showSearch, setShowSearch] = useState("");
@@ -174,7 +174,7 @@ function Courses() {
           {SpinnerShow ? <Spinner /> : null}
 
           {/* <BreakPointTest /> */}
-          <div className="md:grid bg-pink-300 md:grid-cols-12 md:gap-8 relative">
+          <div className="md:grid md:grid-cols-12 md:gap-8 relative">
             {/* left side starts  */}
             <div className=" md:p-0 md:col-span-4  w-full bg-green-300  lg:col-span-3">
               {/* for mobile device responsive design search bar section starts  */}
@@ -252,7 +252,7 @@ function Courses() {
             </div>
             {/* right side of grid starts  */}
             {/* {data.length > 0} ? ( */}
-              <div className="md:col-span-8 lg:col-span-9 bg-blue-200 mt-4 w-full p-8">
+              <div className="md:col-span-8 lg:col-span-9  mt-4 w-full p-8">
                 {/* top section starts  */}
                 <div className="flex items-center justify-between ">
                   <h1 className="font-bold text-xl text-gray-600">
@@ -296,8 +296,8 @@ function Courses() {
                         // ratingNo={item.ratingNo}
                         price={item.price}
                         // price='500'
-                        RP={item.RP}
-                        SP={item.SP}
+                        // RP={item.RP}
+                        // SP={item.SP}
                         discount={item.discount}
                         instructor_img={item.instructor?.profile_img}
                         instructor_name={item.instructor?.first_name}
@@ -324,7 +324,7 @@ function Courses() {
                   sideButton={sideButton}
                 />
               </div>
-            {/* )  */}
+            ) :
             
               <div className="md:col-span-8 lg:col-span-9 bg-gray-50 mt-4 w-full p-8">
                 {/* <BreakPointTest /> */}
