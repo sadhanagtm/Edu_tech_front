@@ -167,7 +167,7 @@ function CourseCard({
                     className="w-full object-cover shadow-xl"
                   />
                 ) : (
-                  <div className="capitalize ">{instructor_name[0]}</div>
+                  <div className="capitalize ">{instructor_name}</div>
                 )}
               </div>
               <p className="font-medium text-sm">{instructor_name}</p>
