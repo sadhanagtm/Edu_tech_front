@@ -27,7 +27,7 @@ function CategoriesSection() {
     <div className="bg-gray-100 pt-16 pb-20 w-full">
       {/* // <div> */}
       <div className="text-center">
-        <div className="font-bold text-gray-700 text-4xl">Our Category</div>
+        <div className="font-bold text-red-700 text-4xl">Our Category</div>
         <p className="my-4 mx-3 text-xs md:text-base  lg:w-2/3 md:mx-auto ">
           Providing with multiple category of courses to learn keen interest
           skills

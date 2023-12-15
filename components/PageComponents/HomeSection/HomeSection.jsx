@@ -116,13 +116,12 @@ function HomeSection() {
     ),
   };
   return (
-    <div className="h-150 2xl:h-152 py-8 md:py-10 2xl:py-12  homeBanner bg-red-900  ">
+    <div className="h-150 2xl:h-152 py-8 md:py-10 2xl:py-12  homeBanner bg-red-300  ">
       <div
         className=" mx-auto h-146 2xl:h-150 px-4 lg:px-16 lg:mr-2 xl:mr-0  bg-blue-400   xl:px-16
        2xl:px-14"
       >
-      lol
-        <div className="grid grid-cols-12 h-146 2xl:bg-red-400  2xl:h-150 gap-6   md:gap-10">
+        <div className="grid grid-cols-12 h-146 2xl:bg-red-400  2xl:h-150 gap-6 md:gap-10">
           {/* slider section starts  */}
           <div
             className="w-full  mx-auto overflow-clip bg-yellow-700 col-span-12 relative
@@ -216,7 +215,7 @@ function HomeSection() {
                 <p
                   className="p-1 px-2 border border-white w-fit
                  my-5 2xl:my-6 transition duration-700 
-                 hover:bg-white hover:text-black cursor-pointer"
+                 hover:bg-yellow-500 hover:text-black cursor-pointer"
                 >
                   View More
                 </p>
@@ -246,7 +245,7 @@ function HomeSection() {
                 </p>
                 <p
                   className="p-2 border border-primary
-                 w-fit my-5 xl:my-5 2xl:my-6 bg-primary shadow-lg transition hover:bg-blue-500
+                 w-fit my-5 xl:my-5 2xl:my-6 bg-primary shadow-lg transition hover:bg-red-500
                   cursor-pointer"
                 >
                   View More

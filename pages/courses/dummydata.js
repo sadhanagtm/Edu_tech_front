@@ -47,7 +47,7 @@ export const datavalue=[
             profile_img:"jpg"
         },
         instructor_name: {
-            first_name:"RaHUL SIR"
+            first_name:"RaHULSIR"
         },
         no_videos:"lalalala"
     },{
